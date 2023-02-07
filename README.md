@@ -39,6 +39,9 @@ Note that the code is only tested under `Python 3.10.7`.
 2. Quantize the data:
 
 ```
+https://github.com/facebookresearch/libri-light/blob/main/data_preparation/README.md
+small.tar (577 hours, 35 GB)
+
 python -m vall_e.emb.qnt data/your_data
 ex) python3 -m vall_e.emb.qnt data/test
 ```
