@@ -40,12 +40,14 @@ Note that the code is only tested under `Python 3.10.7`.
 
 ```
 python -m vall_e.emb.qnt data/your_data
+ex) python3 -m vall_e.emb.qnt data/test
 ```
 
 3. Generate phonemes based on the text:
 
 ```
 python -m vall_e.emb.g2p data/your_data
+ex) python3 -m vall_e.emb.g2p data/test
 ```
 
 4. Customize your configuration by creating `config/your_data/ar.yml` and `config/your_data/nar.yml`. Refer to the example configs in `config/test` and `vall_e/config.py` for details. You may choose different model presets, check `vall_e/vall_e/__init__.py`.
@@ -54,6 +56,7 @@ python -m vall_e.emb.g2p data/your_data
 
 ```
 python -m vall_e.train yaml=config/your_data/ar_or_nar.yml
+ex) python3 -m vall_e.train yaml=config/test/nar.yml
 ```
 
 You may quit your training any time by just typing `quit` in your CLI. The latest checkpoint will be automatically saved.
@@ -64,6 +67,7 @@ Both trained models need to be exported to a certain path. To export either of t
 
 ```
 python -m vall_e.export zoo/ar_or_nar.pt yaml=config/your_data/ar_or_nar.yml
+ex) python3 -m vall_e.export zoo/ar.pt yaml=config/test/ar.yml
 ```
 
 This will export the latest checkpoint.
@@ -72,6 +76,8 @@ This will export the latest checkpoint.
 
 ```
 python -m vall_e <text> <ref_path> <out_path> --ar-ckpt zoo/ar.pt --nar-ckpt zoo/nar.pt
+ex) python3 -m vall_e "Hello" data/test/test.wav result/good.wav  --nar-ckpt zoo/nar.pt
+ex) python3 -m vall_e "Hello" data/test/test.wav result/good_ar.wav  --ar-ckpt zoo/ar.pt
 ```
 
 ## TODO
