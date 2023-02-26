@@ -69,7 +69,7 @@ ex) python3.10 -m vall_e.emb.g2p data/LibriTTS
 
 ```
 python -m vall_e.train yaml=config/your_data/ar_or_nar.yml
-ex) python3.10 -m vall_e.train yaml=config/LibriTTS/nar.yml
+ex) python3.10 -m vall_e.train yaml=config/LibriTTS/nar.ym
 ```
 
 You may quit your training any time by just typing `quit` in your CLI. The latest checkpoint will be automatically saved.
