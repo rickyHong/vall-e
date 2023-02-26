@@ -40,7 +40,10 @@ Note that the code is only tested under `Python 3.10.7`.
 
 ```
 https://github.com/facebookresearch/libri-light/blob/main/data_preparation/README.md
-small.tar (577 hours, 35 GB)
+small.tar (577 hours, 35 GB) - Bad
+
+http://www.openslr.org/60 - Good
+Get: axel --no-proxy https://us.openslr.org/resources/60/train-clean-360.tar.gz
 
 python -m vall_e.emb.qnt data/your_data
 ex) python3 -m vall_e.emb.qnt data/test
