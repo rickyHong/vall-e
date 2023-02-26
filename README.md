@@ -60,7 +60,7 @@ def urlopen(url, data=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
 
 ```
 python -m vall_e.emb.g2p data/your_data
-ex) python3 -m vall_e.emb.g2p data/test
+ex) python3.10 -m vall_e.emb.g2p data/LibriTTS
 ```
 
 4. Customize your configuration by creating `config/your_data/ar.yml` and `config/your_data/nar.yml`. Refer to the example configs in `config/test` and `vall_e/config.py` for details. You may choose different model presets, check `vall_e/vall_e/__init__.py`.
