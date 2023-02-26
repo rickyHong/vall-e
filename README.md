@@ -46,7 +46,14 @@ http://www.openslr.org/60 - Good
 Get: axel --no-proxy https://us.openslr.org/resources/60/train-clean-360.tar.gz
 
 python -m vall_e.emb.qnt data/your_data
-ex) python3 -m vall_e.emb.qnt data/test
+ex) python3.10 -m vall_e.emb.qnt data/LibriTTS
+SSL issue) /usr/lib/python3.10/urllib/request.py (edit)
+.........................
+_context = ssl._create_unverified_context()
+_opener = None
+def urlopen(url, data=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+            *, cafile=None, capath=None, cadefault=False, context=_context):
+.........................
 ```
 
 3. Generate phonemes based on the text:
